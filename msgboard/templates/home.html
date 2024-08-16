@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Message Board</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Profile Picture</th>
+                <th>Permission Level</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Blood Group</th>
+                <th>Password</th>
+                <th>Username</th>
+                <th>Nickname</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for msgboard in all_msgboard_list %}
+            <tr>
+                <td>{{ msgboard.userId }}</td>
+                <td>{{ msgboard.profilePic }}</td>
+                <td>{{ msgboard.permissionLevel }}</td>
+                <td>{{ msgboard.age }}</td>
+                <td>{{ msgboard.gender }}</td>
+                <td>{{ msgboard.mail }}</td>
+                <td>{{ msgboard.height }}</td>
+                <td>{{ msgboard.weight }}</td>
+                <td>{{ msgboard.bloodgroup }}</td>
+                <td>{{ msgboard.password }}</td>
+                <td>{{ msgboard.username }}</td>
+                <td>{{ msgboard.nickname }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
